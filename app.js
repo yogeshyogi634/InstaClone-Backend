@@ -19,8 +19,8 @@ mongoose.connect(process.env.DB_URL+process.env.DB_NAME,{
 .then(()=>{
     console.log("Connected to DB");
 })
-.catch(()=>{
-    console.log("Cannot be connected to DB");
+.catch((err)=>{
+    console.log("Cannot be connected to DB", err);
 }); 
 
 app.listen(process.env.PORT, ()=>{
@@ -28,3 +28,8 @@ app.listen(process.env.PORT, ()=>{
 });
 
 module.exports = app;
+
+
+
+
+
